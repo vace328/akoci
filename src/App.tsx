@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import FullCircleCalculator from './pages/FullCircleCalculator';
 import HalfCircleCalculator from './pages/HalfCircleCalculator';
@@ -9,7 +10,7 @@ import './styles/App.scss';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/calculator/full-circle" element={<FullCircleCalculator />} />
@@ -18,7 +19,7 @@ function App() {
         <Route path="/calculator/box-pleats" element={<BoxPleatsCalculator />} />
         <Route path="/calculator/knife-pleats" element={<KnifePleatsCalculator />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
